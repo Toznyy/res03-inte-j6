@@ -1,0 +1,40 @@
+@import "vars";
+@import "reset";
+
+$pink: #ef476f;  
+$yellow: #ffd166;  
+$green: #06d6a0;  
+$blue: #118ab2;  
+$darkBlue: #073b4c;
+
+body {
+    display:grid;
+    grid-template-rows:repeat(2,1fr);
+    grid-template-columns:repeat(3,1fr);
+    width:100vw;
+    height:100vh;
+    
+    section:first-of-type {
+        background:linear-gradient($darkBlue, $blue, $green);
+    }
+    
+    section:nth-of-type(2) {
+        background: radial-gradient($darkBlue, $blue, $green);
+    }
+    
+    section:nth-of-type(3) {
+        background: radial-gradient($green, $blue, $darkBlue);
+    }
+    
+    section:nth-of-type(4) {
+        background: radial-gradient($pink, $yellow, $green, $blue, $darkBlue);
+    }
+    
+    section:nth-of-type(5) {
+        background: radial-gradient($pink, $yellow, $green, $blue, $darkBlue, $blue, $green, $yellow, $pink);
+    }
+    
+    section:nth-of-type(6) {
+        background: linear-gradient(to left bottom, $darkBlue, $blue, $green, $yellow, $pink);
+    }
+}
